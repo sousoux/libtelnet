@@ -29,12 +29,8 @@ AM_CONDITIONAL([BUILD_DOCS], [test "$DOXYGEN" != no])
 # Checks for standard headers.
 AC_HEADER_STDC
 
-# Checks for libraries.
-PKG_CHECK_MODULES([zlib],
-  [zlib],
-  [AC_DEFINE([HAVE_ZLIB], [1], [Define to 1 if you have zlib.])],
-  [AC_DEFINE([HAVE_ZLIB], [0], [Define to 1 if you have zlib.])])
 
+AC_DEFINE([HAVE_ZLIB], [1])
 # Checks for header files.
 
 # Checks for typedefs, structures and compiler characteristics.
